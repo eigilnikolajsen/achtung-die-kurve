@@ -1,2 +1,2 @@
 # achtung
-Achtung snake
+Achtung snake game with Canvas
