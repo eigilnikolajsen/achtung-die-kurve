@@ -1,6 +1,5 @@
-# achtung
+# Achtung, die Kurve!
 
-Achtung snake game with Canvas
+Revived HTML5 and Javascript version of the Flash game "Achtung, die Kurve!" (beware, (of) the curve!). Hope you enjoy!
 
-Test:
-https://achtung.life
+(https://achtung.life)[https://achtung.life]
