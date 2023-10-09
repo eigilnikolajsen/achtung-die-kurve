@@ -61,6 +61,7 @@ function resetPlayer(w) {
 }
 
 document.addEventListener("keydown", (e) => {
+    const anyActiveKeys = Object.values(players).filter((p) => p.keyR === true || p.keyL === true).length
     for (const player in players) {
         if (players[player].keyR === true) {
             setRightButton(player, curPlayerWrapper, e.code, e.key)
@@ -69,7 +70,7 @@ document.addEventListener("keydown", (e) => {
             setLeftButton(player, curPlayerWrapper, e.code, e.key)
         }
     }
-    if (achtung.startScreen) {
+    if (achtung.startScreen && !anyActiveKeys) {
         for (let index = 1; index <= 6; index++) {
             if (e.key == index.toString()) playerClick(Object.keys(players)[index - 1])
         }
