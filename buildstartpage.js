@@ -25,7 +25,7 @@ for (let i = 0; i < 4; i++) {
     firstRow.append(p)
 }
 playerGrid.append(firstRow)
-let playerCounter = 0;
+let playerCounter = 0
 for (const player in players) {
     let pWrap = document.createElement("section")
     pWrap.classList.add("player_wrapper", player)
@@ -77,32 +77,31 @@ playButton.id = "start_game_button"
 playButton.textContent = "Press SPACE to start game"
 playButtonWrapper.append(playButton)
 startPage.append(playButtonWrapper)
-    //changeFav("#FCF816")
+//changeFav("#FCF816")
 
 playButton.addEventListener("click", () => {
     pressSpace()
 })
 
-
 //make favicon
 function changeFav(col) {
-    var canvas = document.createElement('canvas')
+    var canvas = document.createElement("canvas")
     canvas.width = 240
     canvas.height = 240
-    var ctx = canvas.getContext('2d')
+    var ctx = canvas.getContext("2d")
     var img = new Image()
-    img.src = '/favicon.ico'
+    img.src = "/favicon.ico"
     img.onload = () => {
-        ctx.drawImage(img, 0, 0);
-        ctx.beginPath();
+        ctx.drawImage(img, 0, 0)
+        ctx.beginPath()
         ctx.arc(120, 120, 120, 0, 2 * Math.PI, false)
         ctx.fillStyle = col
         ctx.fill()
 
-        var link = document.createElement('link')
-        link.type = 'image/x-icon'
-        link.rel = 'shortcut icon'
+        var link = document.createElement("link")
+        link.type = "image/x-icon"
+        link.rel = "shortcut icon"
         link.href = canvas.toDataURL("image/x-icon")
-        document.getElementsByTagName('head')[0].appendChild(link)
+        document.getElementsByTagName("head")[0].appendChild(link)
     }
 }

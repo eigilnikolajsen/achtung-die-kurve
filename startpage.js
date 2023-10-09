@@ -1,8 +1,35 @@
 let curPlayerWrapper
-let notTheseKeys = ["Backspace", "Tab", "Enter", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "CapsLock", "Escape", "Space", "MetaLeft", "MetaRight", "ContextMenu", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"]
+let notTheseKeys = [
+    "Backspace",
+    "Tab",
+    "Enter",
+    "ShiftLeft",
+    "ShiftRight",
+    "ControlLeft",
+    "ControlRight",
+    "AltLeft",
+    "AltRight",
+    "CapsLock",
+    "Escape",
+    "Space",
+    "MetaLeft",
+    "MetaRight",
+    "ContextMenu",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10",
+    "F11",
+    "F12",
+]
 
 function playerClick(name) {
-    console.log(players)
     players[name].active = !players[name].active //switch active or not
 
     let w = document.querySelector(`.player_wrapper.${name}`)
@@ -42,8 +69,12 @@ document.addEventListener("keydown", (e) => {
             setLeftButton(player, curPlayerWrapper, e.code, e.key)
         }
     }
+    if (achtung.startScreen) {
+        for (let index = 1; index <= 6; index++) {
+            if (e.key == index.toString()) playerClick(Object.keys(players)[index - 1])
+        }
+    }
 })
-
 
 function getLeftButton(name, w) {
     players[name].keyL = true
