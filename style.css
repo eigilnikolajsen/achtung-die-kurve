@@ -1,6 +1,7 @@
 *,
 body {
-    font-family: "Lexend Deca", sans-serif;
+    letter-spacing: 0.06vw;
+    font-family: "Sarabun", sans-serif;
     box-sizing: border-box;
     color: var(--board-color);
     margin: 0;
@@ -164,7 +165,7 @@ canvas {
     font-size: 20px;
     padding: 10px 0 12px 0;
     margin: 0 30px;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-radius: 6px;
 }
 
@@ -188,11 +189,11 @@ canvas {
 
 #start_game_button {
     background-color: #6d6d6d;
-    border: 3px solid #ffffff;
+    border: 2px solid #ffffff;
     text-align: center;
     font-size: 100%;
     color: #ffffff;
-    padding: 10px 15px;
+    padding: 10px 18px 13px;
     cursor: pointer;
     border-radius: 6px;
     margin: 20px;

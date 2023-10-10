@@ -546,9 +546,9 @@ function checkGameState() {
                         ctxUI.textBaseline = "middle"
                         ctxUI.fillStyle = players[player].color
                         ctxUI.textAlign = "center"
-                        ctxUI.font = `${w100th * 6}px 'Lexend Deca'`
+                        ctxUI.font = `${w100th * 6}px 'Sarabun'`
                         ctxUI.fillText("Konec hry", h / 2, h / 2 - h100th * 5) // the legendary "konec hry"
-                        ctxUI.font = `${w100th * 4}px 'Lexend Deca'`
+                        ctxUI.font = `${w100th * 4}px 'Sarabun'`
                         ctxUI.fillText(`${capitalize(player)} wins!`, h / 2, h / 2 + h100th * 5)
                     }
                 }
@@ -592,15 +592,16 @@ const drawGameUI = () => {
     let UIcenter = +h + (w - h) / 2
     ctxUI.fillStyle = "#FFFFFF"
     ctxUI.textAlign = "center"
-    ctxUI.font = `${w100th * 3}px 'Lexend Deca'`
+    ctxUI.letterSpacing = `${w100th * 0.06}px`
+    ctxUI.font = `${w100th * 3}px 'Sarabun'`
     ctxUI.fillText("Race to", UIcenter, w100th * 5)
-    ctxUI.font = `${w100th * 12}px 'Lexend Deca'`
+    ctxUI.font = `${w100th * 12}px 'Sarabun'`
     ctxUI.fillText(achtung.pointGoal, UIcenter, w100th * 15)
-    ctxUI.font = `${w100th * 2}px 'Lexend Deca'`
+    ctxUI.font = `${w100th * 2}px 'Sarabun'`
     ctxUI.fillText("2 point difference", UIcenter, w100th * 19)
 
     // draw player names and score
-    ctxUI.font = `${w100th * 3}px 'Lexend Deca'`
+    ctxUI.font = `${w100th * 3}px 'Sarabun'`
     let playerYOffset = w100th * 32
 
     for (let i = achtung.scoreArray.length - 1; i >= 0; i--) {
@@ -616,7 +617,7 @@ const drawGameUI = () => {
     // draw space to continue text
     ctxUI.fillStyle = "#FFFFFF"
     ctxUI.textAlign = "center"
-    ctxUI.font = `${w100th * 2}px 'Lexend Deca'`
+    ctxUI.font = `${w100th * 2}px 'Sarabun'`
     ctxUI.fillText("SPACE to play", UIcenter, +h - w100th * 6)
     ctxUI.fillText("ESCAPE to quit", UIcenter, +h - w100th * 3)
 }

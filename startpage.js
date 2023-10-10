@@ -1,5 +1,5 @@
 let curPlayerWrapper
-let notTheseKeys = [
+const notTheseKeys = [
     "Backspace",
     "Tab",
     "Enter",
@@ -32,7 +32,7 @@ let notTheseKeys = [
 function playerClick(name) {
     players[name].active = !players[name].active //switch active or not
 
-    let w = document.querySelector(`.player_wrapper.${name}`)
+    const w = document.querySelector(`.player_wrapper.${name}`)
     for (const player in players) {
         if (name == player) {
             if (players[name].active) {
@@ -79,7 +79,7 @@ document.addEventListener("keydown", (e) => {
 
 function getLeftButton(name, w) {
     players[name].keyL = true
-    let keyWrapperLeft = w.querySelector(".key_wrapper_left .key_button")
+    const keyWrapperLeft = w.querySelector(".key_wrapper_left .key_button")
     keyWrapperLeft.classList.remove("hidden")
 }
 
@@ -97,7 +97,7 @@ function setLeftButton(name, w, key, keyName) {
 
 function getRightButton(name, w) {
     players[name].keyR = true
-    let keyWrapperRight = w.querySelector(".key_wrapper_right .key_button")
+    const keyWrapperRight = w.querySelector(".key_wrapper_right .key_button")
     keyWrapperRight.classList.remove("hidden")
 }
 
@@ -115,13 +115,11 @@ function setRightButton(name, w, key, keyName) {
 }
 
 document.querySelector("#gamemode_wrapper p:nth-child(1)").addEventListener("click", (u) => {
-    u.path[0].classList.add("underline")
-    u.path[1].querySelector("p:nth-child(2)").classList.remove("underline")
+    document.querySelectorAll("#gamemode_wrapper p").forEach((p) => p.classList.toggle("underline"))
     achtung.gamemode = 1
 })
 
 document.querySelector("#gamemode_wrapper p:nth-child(2)").addEventListener("click", (u) => {
-    u.path[0].classList.add("underline")
-    u.path[1].querySelector("p:nth-child(1)").classList.remove("underline")
+    document.querySelectorAll("#gamemode_wrapper p").forEach((p) => p.classList.toggle("underline"))
     achtung.gamemode = 0
 })
